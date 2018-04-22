@@ -1,8 +1,8 @@
-# Xspeedit (sromain)
+# Xspeedit (sromain)
 
-## Installation
+## Installation
 
-### Prérequis
+### Prérequis
 * Maven (<a href="https://maven.apache.org/">site officiel</a>)
 * JDK Java 8 (<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">site officiel</a>)
 
