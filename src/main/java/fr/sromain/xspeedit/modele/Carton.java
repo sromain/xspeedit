@@ -7,15 +7,19 @@ public class Carton {
 	public static final Integer CAPACITE = 10;
 
 	List<Article> articles;
+	Integer capaciteCourante;
 
 	public Carton() {
-		super();
-		articles = new ArrayList<Article>();
+		this.articles = new ArrayList<Article>();
+		this.capaciteCourante = 0;
 	}
 
 	public Carton(List<Article> articles) {
-		super();
 		this.articles = articles;
+		this.capaciteCourante = 0;
+		for (Article article : articles) {
+			this.capaciteCourante += article.getTaille();
+		}
 	}
 
 	public List<Article> getArticles() {
@@ -27,11 +31,12 @@ public class Carton {
 	}
 
 	public Integer getCapaciteCourante() {
-		Integer capaciteCourante = 0;
-		for (Article article : articles) {
-			capaciteCourante += article.getTaille();
-		}
-		return capaciteCourante;
+		return this.capaciteCourante;
+	}
+
+	public void ajouterArticle(Article article) {
+		this.articles.add(article);
+		this.capaciteCourante += article.getTaille();
 	}
 
 	public String toString() {

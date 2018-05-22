@@ -31,7 +31,7 @@ public class EmpaquetageServiceImpl implements IEmpaquetageService {
 			for (Integer index = 0; index < articles.size(); index++) {
 				Article articleCourant = articles.get(index);
 				if (carton.getCapaciteCourante() + articleCourant.getTaille() <= Carton.CAPACITE) {
-					carton.getArticles().add(articleCourant);
+					carton.ajouterArticle(articleCourant);
 					articles.remove(articleCourant);
 					index--;
 				}
